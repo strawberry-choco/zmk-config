@@ -67,10 +67,10 @@
 
         default_layer {
             bindings = <
-&ht LS(Q) Q  &kp D  &kp R  &kp W        &kp B        &kp J      &kp F          &kp U      &kp P       &kp SEMICOLON
-&kp A        &kp S  &kp H  &kp T        &kp G        &kp Y      &kp N          &kp E      &kp O       &kp I
-&kp Z        &kp X  &kp M  &kp C        &kp V        &kp K      &kp L          &kp COMMA  &kp PERIOD  &kp SLASH
-                           &lt LEF TAB  &kp SPACE    &kp ENTER  &lt RIG ENTER
+&ht LS(Q) Q  &ht LS(D) D  &ht LS(R) R  &ht LS(W) W  &ht LS(B) B                    &ht J J                          &ht LS(F) F        &ht LS(U) U          &ht LS(P) P            &ht LS(SEMICOLON) SEMICOLON
+&ht LS(A) A  &ht LS(S) S  &ht LS(H) H  &ht LS(T) T  &ht LS(G) G                    &ht LS(Y) Y                      &ht LS(N) N        &ht LS(E) E          &ht LS(O) O            &ht LS(I) I
+&ht LS(Z) Z  &ht LS(X) X  &ht LS(M) M  &ht LS(C) C  &ht LS(V) V                    &ht LS(K) K                      &ht LS(L) L        &ht LS(COMMA) COMMA  &ht LS(PERIOD) PERIOD  &ht LS(SLASH) SLASH
+                                       &lt LEF TAB  &mt LS(LA(LC(SPACE))) SPACE    &mt LS(LA(LC(LG(ENTER)))) ENTER  &lt RIG BACKSPACE
             >;
         };
 
