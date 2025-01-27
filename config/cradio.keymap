@@ -4,11 +4,14 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 2500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define MAC 0
 #define WIN 1
@@ -67,10 +70,10 @@
 
         default_layer {
             bindings = <
-&ht LS(Q) Q  &ht LS(D) D  &ht LS(R) R  &ht LS(W) W  &ht LS(B) B        &ht J J                     &ht LS(F) F        &ht LS(U) U          &ht LS(P) P            &ht LS(SEMICOLON) SEMICOLON
-&ht LS(A) A  &ht LS(S) S  &ht LS(H) H  &ht LS(T) T  &ht LS(G) G        &ht LS(Y) Y                 &ht LS(N) N        &ht LS(E) E          &ht LS(O) O            &ht LS(I) I
-&ht LS(Z) Z  &ht LS(X) X  &ht LS(M) M  &ht LS(C) C  &ht LS(V) V        &ht LS(K) K                 &ht LS(L) L        &ht LS(COMMA) COMMA  &ht LS(PERIOD) PERIOD  &ht LS(SLASH) SLASH
-                                       &lt LEF TAB  &mt LCTRL SPACE    &mt LS(LA(LC(LGUI))) ENTER  &lt RIG BACKSPACE
+&ht LS(Q) Q  &ht LS(D) D  &ht LS(R) R  &ht LS(W) W  &ht LS(B) B         &ht J J                     &ht LS(F) F    &ht LS(U) U          &ht LS(P) P            &ht LEFT_SHIFT DELETE
+&ht LS(A) A  &ht LS(S) S  &ht LS(H) H  &ht LS(T) T  &ht LS(G) G         &ht LS(Y) Y                 &ht LS(N) N    &ht LS(E) E          &ht LS(O) O            &ht LS(I) I
+&ht LS(Z) Z  &ht LS(X) X  &ht LS(M) M  &ht LS(C) C  &ht LS(V) V         &ht LS(K) K                 &ht LS(L) L    &ht LS(COMMA) COMMA  &ht LS(PERIOD) PERIOD  &kp LEFT_META
+                                       &lt LEF TAB  &mt LCTRL ESCAPE    &mt LS(LA(LC(LGUI))) SPACE  &lt RIG ENTER
             >;
         };
 
@@ -88,16 +91,16 @@
 &ht LS(N1) N1  &ht LS(N2) N2  &ht LS(N3) N3  &ht LS(N4) N4  &ht N5 N5    &ht LS(N6) N6  &ht LS(N7) N7  &ht LS(N8) N8  &ht LS(N9) N9  &ht LS(N0) N0
 &kp TAB        &kp CAPS       &kp PSCRN      &kp INS        &trans       &kp LEFT       &kp LEFT       &kp UP         &kp RIGHT      &trans
 &trans         &trans         &kp LEFT_ALT   &trans         &trans       &kp HOME       &kp PG_DN      &kp DOWN       &kp END        &bootloader
-                                             &trans         &kp ESC      &trans         &trans
+                                             &trans         &trans       &trans         &trans
             >;
         };
 
         left_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans    &kp F7                               &kp F8                                     &kp F9                               &kp F10                                    &kp F11
-&kp F5  &kp F6   &kp F7   &kp F8   &trans    &ht LS(MINUS) MINUS                  &ht LS(LEFT_BRACKET) LEFT_BRACKET          &ht LS(RIGHT_BRACKET) RIGHT_BRACKET  &ht LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &kp NUMBER_0
-&kp F9  &kp F10  &kp F11  &kp F12  &trans    &ht LS(RIGHT_BRACKET) RIGHT_BRACKET  &ht LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &trans                               &trans                                     &kp F12
-                          &trans   &trans    &tog MOUSE                           &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
+&kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+                          &trans   &trans    &tog MOUSE  &trans
             >;
         };
 
