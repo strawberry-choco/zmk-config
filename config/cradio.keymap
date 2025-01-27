@@ -8,7 +8,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define MAC 0
@@ -68,7 +67,7 @@
 
         default_layer {
             bindings = <
-&ht LS(Q) Q  &ht LS(D) D  &ht LS(R) R  &ht LS(W) W  &ht LS(B) B         &ht J J                     &ht LS(F) F    &ht LS(U) U          &ht LS(P) P            &ht LEFT_SHIFT DELETE
+&ht LS(Q) Q  &ht LS(D) D  &ht LS(R) R  &ht LS(W) W  &ht LS(B) B         &ht J J                     &ht LS(F) F    &ht LS(U) U          &ht LS(P) P            &ht LEFT_SHIFT BACKSPACE
 &ht LS(A) A  &ht LS(S) S  &ht LS(H) H  &ht LS(T) T  &ht LS(G) G         &ht LS(Y) Y                 &ht LS(N) N    &ht LS(E) E          &ht LS(O) O            &ht LS(I) I
 &ht LS(Z) Z  &ht LS(X) X  &ht LS(M) M  &ht LS(C) C  &ht LS(V) V         &ht LS(K) K                 &ht LS(L) L    &ht LS(COMMA) COMMA  &ht LS(PERIOD) PERIOD  &kp LEFT_META
                                        &lt LEF TAB  &mt LCTRL ESCAPE    &mt LS(LA(LC(LGUI))) SPACE  &lt RIG ENTER
