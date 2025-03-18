@@ -94,9 +94,9 @@
 
         left_layer {
             bindings = <
-&kp F2                     &kp F3                     &kp F4                     &kp F5                     &kp F6                               &kp F7                               &kp F8                                     &kp F9                     &kp F10                            &kp F11
-&ht LS(NUMBER_1) NUMBER_1  &ht LS(NUMBER_2) NUMBER_2  &ht LS(NUMBER_3) NUMBER_3  &ht LS(NUMBER_4) NUMBER_4  &ht LS(NUMBER_5) NUMBER_5            &ht LS(NUMBER_6) NUMBER_6            &ht LS(NUMBER_7) NUMBER_7                  &ht LS(NUMBER_8) NUMBER_8  &ht LS(NUMBER_9) NUMBER_9          &ht LS(NUMBER_0) NUMBER_0
-&kp F1                     &trans                     &trans                     &ht LS(GRAVE) GRAVE        &ht LS(LEFT_BRACKET) LEFT_BRACKET    &ht LS(RIGHT_BRACKET) RIGHT_BRACKET  &ht LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &trans                     &ht LS(SINGLE_QUOTE) SINGLE_QUOTE  &kp F12
+&kp F2                     &kp F3                     &kp F4                     &kp F5                     &kp F6                               &kp F7                               &kp F8                                     &kp F9                     &kp F10                    &kp F11
+&ht LS(NUMBER_1) NUMBER_1  &ht LS(NUMBER_2) NUMBER_2  &ht LS(NUMBER_3) NUMBER_3  &ht LS(NUMBER_4) NUMBER_4  &ht LS(NUMBER_5) NUMBER_5            &ht LS(NUMBER_6) NUMBER_6            &ht LS(NUMBER_7) NUMBER_7                  &ht LS(NUMBER_8) NUMBER_8  &ht LS(NUMBER_9) NUMBER_9  &ht LS(NUMBER_0) NUMBER_0
+&kp F1                     &trans                     &trans                     &ht LS(GRAVE) GRAVE        &ht LS(LEFT_BRACKET) LEFT_BRACKET    &ht LS(RIGHT_BRACKET) RIGHT_BRACKET  &ht LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &trans                     &ht LS(MINUS) MINUS        &kp F12
                                                                                  &trans                     &trans                               &tog MOUSE                           &trans
             >;
         };
