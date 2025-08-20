@@ -57,8 +57,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <RIG LEF>;
-            then-layer = <TRI>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 
@@ -67,10 +67,10 @@
 
         default_layer {
             bindings = <
-&ht LS(Q) Q  &ht LS(D) D  &ht LS(R) R  &ht LS(W) W  &ht LS(B) B         &ht LS(J) J                 &ht LS(F) F    &ht LS(U) U          &ht LS(P) P            &ht LS(SEMICOLON) SEMICOLON
-&ht LS(A) A  &ht LS(S) S  &ht LS(H) H  &ht LS(T) T  &ht LS(G) G         &ht LS(Y) Y                 &ht LS(N) N    &ht LS(E) E          &ht LS(O) O            &ht LS(I) I
-&ht LS(Z) Z  &ht LS(X) X  &ht LS(M) M  &ht LS(C) C  &ht LS(V) V         &ht LS(K) K                 &ht LS(L) L    &ht LS(COMMA) COMMA  &ht LS(PERIOD) PERIOD  &ht LS(SLASH) SLASH
-                                       &lt LEF TAB  &mt LCTRL ESCAPE    &mt LS(LA(LC(LGUI))) SPACE  &lt RIG ENTER
+&ht LS(Q) Q  &ht LS(D) D  &ht LS(R) R  &ht LS(W) W  &ht LS(B) B         &ht LS(J) J                 &ht LS(F) F  &ht LS(U) U          &ht LS(P) P            &ht LS(SEMICOLON) SEMICOLON
+&ht LS(A) A  &ht LS(S) S  &ht LS(H) H  &ht LS(T) T  &ht LS(G) G         &ht LS(Y) Y                 &ht LS(N) N  &ht LS(E) E          &ht LS(O) O            &ht LS(I) I
+&ht LS(Z) Z  &ht LS(X) X  &ht LS(M) M  &ht LS(C) C  &ht LS(V) V         &ht LS(K) K                 &ht LS(L) L  &ht LS(COMMA) COMMA  &ht LS(PERIOD) PERIOD  &ht LS(SLASH) SLASH
+                                       &lt 3 TAB    &mt LCTRL ESCAPE    &mt LS(LA(LC(LGUI))) SPACE  &lt 2 ENTER
             >;
         };
 
@@ -79,7 +79,7 @@
 &kp Q  &kp W       &kp E       &kp R        &kp T        &kp Y      &kp U        &kp I       &kp O       &kp P
 &kp A  &ht LALT S  &ht LGUI D  &ht LCTRL F  &kp G        &kp H      &ht RCTRL J  &ht RGUI K  &ht RALT L  &kp BSPC
 &kp Z  &kp X       &kp C       &kp V        &kp B        &kp N      &kp M        &kp COMMA   &kp DOT     &kp ENTER
-                               &lt LEF TAB  &kp SPACE    &kp ENTER  &lt RIG TAB
+                               &lt 3 TAB    &kp SPACE    &kp ENTER  &lt 2 TAB
             >;
         };
 
@@ -97,25 +97,16 @@
 &kp F2                     &kp F3                     &kp F4                     &kp F5                     &kp F6                               &kp F7                               &kp F8                                     &kp F9                     &kp F10                    &kp F11
 &ht LS(NUMBER_1) NUMBER_1  &ht LS(NUMBER_2) NUMBER_2  &ht LS(NUMBER_3) NUMBER_3  &ht LS(NUMBER_4) NUMBER_4  &ht LS(NUMBER_5) NUMBER_5            &ht LS(NUMBER_6) NUMBER_6            &ht LS(NUMBER_7) NUMBER_7                  &ht LS(NUMBER_8) NUMBER_8  &ht LS(NUMBER_9) NUMBER_9  &ht LS(NUMBER_0) NUMBER_0
 &kp F1                     &trans                     &trans                     &ht LS(GRAVE) GRAVE        &ht LS(LEFT_BRACKET) LEFT_BRACKET    &ht LS(RIGHT_BRACKET) RIGHT_BRACKET  &ht LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &trans                     &ht LS(MINUS) MINUS        &ht LS(EQUAL) EQUAL
-                                                                                 &trans                     &trans                               &tog MOUSE                           &trans
+                                                                                 &trans                     &trans                               &tog 0                               &trans
             >;
         };
 
         tri_layer {
             bindings = <
-&kp F1       &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &tog WIN  &kp C_MUTE    &kp C_PREV
-&kp F5       &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &trans    &kp C_VOL_UP  &kp C_PP
-&bootloader  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans    &kp C_VOL_DN  &kp C_NEXT
+&kp F1       &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &tog 1        &kp C_MUTE    &kp C_PREV
+&kp F5       &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &out OUT_TOG  &kp C_VOL_UP  &kp C_PP
+&bootloader  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans        &kp C_VOL_DN  &kp C_NEXT
                                &trans   &trans          &trans        &trans
-            >;
-        };
-
-        mouse {
-            bindings = <
-&tog MOUSE  &mkp MB4  &mkp MCLK  &mkp MB5   &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &tog MOUSE
-&trans      &trans    &trans     &trans     &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans      &trans    &trans     &trans     &trans        &trans          &mkp MB4        &mkp MCLK     &mkp MB5         &trans
-                                 &kp SPACE  &kp LSHIFT    &mkp LCLK       &mkp RCLK
             >;
         };
     };
